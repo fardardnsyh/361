@@ -1,0 +1,39 @@
+---
+import * as m from '@/paraglide/messages'
+
+import ContactLink from './ContactLink.astro'
+import SectionTitle from './SectionTitle.astro'
+---
+
+<section id="contact">
+  <SectionTitle title={m.linkLabelContact()} />
+  <div class="pl-4 mb-[50px]">
+    <ContactLink
+      label="GitHub: /drewdomi"
+      leftIcon="bi:github"
+      href="https://github.com/drewdomi"
+    />
+    <ContactLink
+      label="LinkedIn: /in/drewdomi"
+      leftIcon="bi:linkedin"
+      href="https://linkedin.com/in/drewdomi"
+    />
+    <ContactLink
+      label="Email: contato@drewdomi.com"
+      leftIcon="bi:envelope-fill"
+      href="mailto:contato@drewdomi.com"
+    />
+    <span class="tooltip tooltip-right" data-tip="Expires: [2026-09-15]">
+      <ContactLink
+        label={m.contactGpg()}
+        leftIcon="bi:key-fill"
+        href="/public_gpg.txt"
+      />
+    </span>
+    <ContactLink
+      label={m.contactDiscordCommunity()}
+      leftIcon="simple-icons:discord"
+      href="https://discord.gg/rUZRTrggat"
+    />
+  </div>
+</section>
